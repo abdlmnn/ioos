@@ -25,6 +25,24 @@
                 </div>
             </div>
 
+            <!-- UPDATE FORM -->
+            <div class="cat-cont" id="updateForm">
+                <div class="form-container">
+                    <h1>UPDATE Category</h1>
+
+                    <form action="categoryProcess.php" method="post">
+
+                    <input type="hidden" name="updateID" value="">
+                    <input type="text" name="inputName" placeholder="Enter name" required autofocus>
+
+                    <button type="submit" name="add-category-button">
+                        <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    </button>
+
+                    </form>
+                </div>
+            </div>
+
             <div class="table-container">
 
                 <button type="submit" class="add-category" onclick="showForm()">
@@ -45,7 +63,7 @@
                         </thead>
                         <?php
                             // Displaying and Selecting all Table Rows which is category
-                            include 'functions/queryFunction.php';
+                            include 'function.php';
                             $categoryTable = selectAllTable(tableName: 'category');
                         
                             foreach ($categoryTable as $categoryRows)

@@ -6,7 +6,7 @@
 
     $mysql = new mysqli($hostname,$username,$password,$database);
 
-    $resultMysql = $mysqli->connect_error;
+    $resultMysql = $mysql->connect_error;
 
     if ($resultMysql)
     {

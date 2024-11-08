@@ -1,5 +1,5 @@
 <?php
-    include 'connection.php';
+    include '../connection.php';
 
     // This is for All Table 
     // Selecting all the Table to display the value
@@ -7,7 +7,7 @@
     {
         $selectTable = "
             SELECT * 
-            FROM $tableName 
+            FROM $tableName     
         ";  
 
         include_once 'execute.php';
@@ -40,8 +40,8 @@
             WHERE id = '$id'
         ";
  
-        include_once 'functions/queryExecute.php';
-        return queryExecute($selectCategory);
+        include_once 'execute.php';
+        return execute($selectCategory);
     }
 
      // Updating the values through the Category Table
@@ -53,8 +53,8 @@
              WHERE id = '$id'
          ";
  
-         include_once 'functions/queryExecute.php';
-         return queryExecute($updateCategory);
+         include_once 'execute.php';
+         return execute($updateCategory);
      }
  
      // Deleteing the values through the Category Table with exact ID
@@ -65,8 +65,8 @@
              WHERE id = '$id'
          ";
  
-         include_once 'functions/queryExecute.php';
-         return queryExecute($deleteCategory);
+         include_once 'execute.php';
+         return execute($deleteCategory);
      }
  ?>
 <!-- CATEGORY FUNCTIONS QUERY -->
@@ -86,8 +86,8 @@
             VALUES ('$image','$name','$gender','$date',$category)
         ";
 
-        include_once 'functions/queryExecute.php';
-        return queryExecute($insertItems);
+        include_once 'execute.php';
+        return execute($insertItems);
     }
 
     // Selecting all  Items Table with exact ID
@@ -99,8 +99,8 @@
             WHERE id = '$id'
         ";
 
-        include_once 'queryExecute.php';
-        return queryExecute($selectItems);
+        include_once 'execute.php';
+        return execute($selectItems);
     }
 
     // Updating the values through the  Items Table
@@ -112,8 +112,8 @@
             WHERE id = '$id'
         ";
 
-        include_once 'queryExecute.php';
-        return queryExecute($updateItems);
+        include_once 'execute.php';
+        return execute($updateItems);
     }
 
     // Deleteing the values through the  Items Table with exact ID
@@ -124,8 +124,8 @@
             WHERE id = '$id'
         ";
 
-        include_once 'queryExecute.php';
-        return queryExecute($deleteItems);
+        include_once 'execute.php';
+        return execute($deleteItems);
     }
 ?>
 <!--  ITEMS FUNCTIONS QUERY -->
